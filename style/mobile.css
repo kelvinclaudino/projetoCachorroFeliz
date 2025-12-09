@@ -1,0 +1,395 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --colorPrimary: #DA9001;
+    --colorSecundary: rgb(0, 0, 0);
+    --colorTerceira: #333232;
+}
+
+
+
+@media (max-width: 600px) {
+
+    /*----MENU-----*/
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+    }
+
+    /* Mostrar botão hamburguer */
+    .menu-hamburguer {
+        display: block;
+        z-index: 999;
+    }
+
+    .logoMenu {}
+
+    /* Esconder menu por padrão */
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background: var(--colorPrimary);
+        flex-direction: column;
+        padding-top: 80px;
+        transition: 0.3s;
+        box-shadow: -3px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 20px;
+        align-items: start;
+        padding-left: 30px;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+
+    /* Quando o menu estiver ativo */
+    nav.ativo {
+        right: 0;
+    }
+
+    /* Esconde o botão de contato no mobile */
+    .btn_contato {
+        display: none !important;
+    }
+
+    .pataMenu {
+        display: none !important;
+    }
+
+
+
+
+
+
+    /*----BANNER-----*/
+    header {
+        height: 7em;
+        /* menor */
+        padding: 0 1.5rem;
+        /* reduzido */
+        position: fixed;
+        /* deixa sobreposto */
+    }
+
+    /* Remove interferência da .container no mobile */
+    .container {
+        height: auto !important;
+    }
+
+    /* HERO — full screen real */
+    .hero {
+        height: 100vh !important;
+        margin-top: 0 !important;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .container_titulo {
+        align-items: center;
+        /* CENTRALIZA NO MOBILE */
+        text-align: center;
+        text-shadow: 2px 2px 1px black;
+    }
+
+    .heroTitle {
+        font-size: 1.8em;
+        /* DIMINUI TAMANHO */
+
+    }
+
+    .heroText {
+        font-size: 1.1em;
+        /* DIMINUI TEXTO */
+        max-width: 90%;
+        margin-top: -80px;
+    }
+
+    .container {
+        height: auto;
+        /* PERMITE CRESCER NO MOBILE */
+        padding-bottom: 2em;
+    }
+
+    .logoBanner {
+        margin-top: 100px;
+        height: 300px;
+        /* REDUZ A IMAGEM */
+        animation: expandir 2s ease-in-out infinite;
+    }
+
+    .heroTitle {
+        display: none !important;
+    }
+
+    .heroText br {
+        display: none;
+    }
+
+
+    /*-----lar temporario-----*/
+    #projeto {
+        padding-top: 50px;
+    }
+
+    .containerLarTemp {
+        flex-direction: column;
+        gap: 25px;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .imgLarTemp {
+        height: 320px;
+        width: 55%;
+        border-radius: 15px;
+        object-fit: cover;
+    }
+
+    .textoLarTemp {
+        max-width: 100%;
+    }
+
+    .tag {
+        font-size: 16px;
+        padding: 6px 16px;
+    }
+
+    .textoLarTemp h2 {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .textoLarTemp p {
+        font-size: 15px;
+        text-align: justify;
+    }
+
+    .listaBeneficios {
+        grid-template-columns: 1fr;
+        /* vira 1 coluna */
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .itemBeneficio {
+        justify-content: flex-start;
+    }
+
+    .check {
+        width: 24px !important;
+        height: 24px !important;
+        min-width: 24px !important;
+        min-height: 24px !important;
+        font-size: 12px !important;
+    }
+
+    .itemBeneficio p {
+        font-size: 14px;
+    }
+
+    #quemSomos {
+        padding: 0 20px;
+        text-align: center;
+        scroll-margin-top: 6em;
+    }
+
+    .titleSection {
+        font-size: 18px;
+        padding: 6px 16px;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        flex-direction: column;
+        gap: 25px;
+        padding: 0 20px 30px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .imgEquipe {
+        width: 100%;
+        height: 260px;
+        border-radius: 12px;
+        object-fit: cover;
+    }
+
+    .card p {
+        font-size: 14px;
+        text-align: justify;
+        width: 100%;
+    }
+
+    .mission-highlight {
+        padding: 18px;
+        margin: 20px 0;
+        border-radius: 12px;
+    }
+
+    .mission-highlight h3 {
+        font-size: 16px;
+    }
+
+    .mission-highlight p {
+        font-size: 14px;
+    }
+
+    .features {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .feature-item {
+        width: 100%;
+        min-width: unset;
+        padding: 18px;
+        font-size: 14px;
+    }
+
+    .feature-item h4 {
+        font-size: 16px;
+    }
+
+    .feature-item p {
+        font-size: 14px;
+    }
+
+    /*--TESTE--*/
+    #teste {
+        scroll-margin-top: 6em;
+        padding: 20px 10px;
+    }
+
+    .container-teste {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .secTeste {
+        flex-direction: column;
+        padding: 30px 0;
+        gap: 20px;
+    }
+
+    .teste-conteudo {
+        max-width: 100%;
+    }
+
+    .descricao-teste {
+        font-size: 14px;
+        margin: 10px 0 25px;
+        line-height: 1.5;
+    }
+
+    .btnTeste {
+        padding: 12px 28px;
+        font-size: 1rem;
+    }
+
+    /* === IMAGENS DE CACHORRO === */
+    .teste-imagens {
+        margin-top: 25px;
+        gap: 10px;
+        flex-wrap: wrap;
+        /* permite quebrar linha */
+        justify-content: center;
+    }
+
+    .imgDogTeste {
+        width: 28%;
+        /* aumenta no mobile */
+        max-width: 110px;
+        /* limite para não exagerar */
+    }
+
+    .container {
+        padding-top: 10px;
+    }
+
+    .container-contato {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .contato-section .contato-container {
+        max-width: 100%;
+    }
+
+    .contato-section .subtitle {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+
+    /* Cards – ficam 2 por linha no mobile */
+    .contato-section .cards-contato {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        justify-items: center;
+    }
+
+    /* Cada Card */
+    .contato-section .card-contato {
+        width: 100%;
+        /* preenche a coluna */
+        max-width: 160px;
+        /* controla tamanho no mobile */
+        height: 150px;
+        /* reduz altura */
+        padding: 20px;
+        margin: 0;
+        margin-top: 25px;
+    }
+
+    .contato-section .card-contato .icon {
+        font-size: 32px;
+        margin-bottom: 8px;
+    }
+
+    .contato-section .card-contato strong {
+        font-size: 1rem;
+    }
+
+    .contato-section .card-contato span {
+        font-size: 0.85rem;
+    }
+
+
+    /* ============================
+       MOBILE – RODAPÉ
+    ===============================*/
+    footer {
+        margin-top: 20px;
+        height: auto;
+        padding: 15px 10px;
+        font-size: 13px;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    footer p{
+        width: 80%;
+    }
+
+}
